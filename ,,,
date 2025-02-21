@@ -1,0 +1,4 @@
+.emoji {
+    position: absolute;
+    font-size: 30px;
+    animation: emojiExplosion 1s ease-out;
