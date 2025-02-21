@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Are You Smiling? 😊</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="floating-tab">
+        <div class="emoji floating">😍</div>
+        <h2>Are you smiling? 😊</h2>
+        <button id="yesBtn">Yes</button>
+        <button id="noBtn">No</button>
+        <p id="message"></p>
+    </div>
+
+    <script>
+        document.getElementById("yesBtn").addEventListener("click", function() {
+            let emojis = "😍🥰😊✨💖🌸🎉💞💘";
+            let emojiArray = emojis.split("");
+            let container = document.body;
+            
+            for (let i = 0; i < 30; i++) {
+                let emoji = document.createElement("div");
+                emoji.classList.add("floating-emoji");
+                emoji.innerText = emojiArray[Math.floor(Math.random() * emojiArray.length)];
+                emoji.style.left = Math.random() * 100 + "vw";
+                emoji.style.animationDuration = Math.random() * 3 + 2 + "s";
+                container.appendChild(emoji);
+
+                setTimeout(() => {
+                    emoji.remove();
+                }, 4000);
+            }
+        });
+
+        document.getElementById("noBtn").addEventListener("click", function() {
+            document.getElementById("message").innerText = "Smile, life is too short! 😊💖";
+        });
+    </script>
+</body>
+</html>

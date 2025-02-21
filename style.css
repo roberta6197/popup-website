@@ -1,0 +1,94 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #fffaf0;
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 🌟 Floating Glittering Tab */
+.floating-tab {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 20px rgba(255, 105, 180, 0.8);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: moveAround 5s infinite alternate ease-in-out;
+    border: 3px solid pink;
+}
+
+/* ✨ Glitter Effect on Hover */
+.floating-tab:hover {
+    box-shadow: 0px 0px 30px rgba(255, 192, 203, 1), 0px 0px 20px rgba(255, 20, 147, 0.8);
+}
+
+/* 🌈 Floating effect */
+@keyframes moveAround {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    50% { transform: translate(-48%, -52%) rotate(3deg); }
+    100% { transform: translate(-50%, -50%) rotate(-3deg); }
+}
+
+/* 🌟 Floating emoji animation */
+.emoji {
+    font-size: 40px;
+    position: absolute;
+    animation: floatAnimation 5s infinite alternate ease-in-out;
+}
+
+@keyframes floatAnimation {
+    0% {
+        top: 0px;
+        left: 20%;
+        transform: rotate(0deg);
+    }
+    50% {
+        top: 50%;
+        left: 50%;
+        transform: rotate(15deg);
+    }
+    100% {
+        top: 80%;
+        left: 80%;
+        transform: rotate(-15deg);
+    }
+}
+
+/* 🌸 Pretty Buttons */
+button {
+    padding: 10px 15px;
+    margin: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #ffb6c1;
+    color: white;
+}
+
+/* 🎉 Floating emoji effect for yes button */
+.floating-emoji {
+    position: absolute;
+    font-size: 30px;
+    animation: emojiRain linear infinite;
+}
+
+@keyframes emojiRain {
+    from {
+        top: -10%;
+        opacity: 1;
+    }
+    to {
+        top: 110%;
+        opacity: 0;
+    }
+}
